@@ -21,8 +21,6 @@ git clone git@github.com:me25hage/performance-card-generator.git
 Download dependencies.
 ```
 pip install numpy
-```
-```
 pip install scikit-image
 pip install scikit-learn
 ```
@@ -33,13 +31,17 @@ pip install scikit-learn
 
 ## Usage
 
-This command line tool creates a python shell in which the user is prompted to answer a series of questions regarding their model.
+This python script generates a performance scorecard from the given data.
 
-The script will generate a model card from the user's responses input through the command line or through a .txt document. To input answers through a .txt document. Begin the tool and answer the responses as prompted, selecting 'Text Document' as your input preference.
 ```
-Usage: python ModelCardGenerator.py
+Usage: python performanceCard.py --input data/example_data_classification.csv --data ACD_CHG --val ACD_CHG_VAL --strata Housing_Type State ACD_IMG_DATE --title ACD --model classification
 
-  Open shell to generate a model card.
+  --input: CSV with model output and validation data as columns
+  --data: The model output column title
+  --val: The validation data column title
+  --strata: Other column titles for which to examine classes
+  --title: Model title
+  --model: Classification or regression
 
 ```
 
